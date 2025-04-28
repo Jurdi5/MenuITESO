@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenido Alumno</title>
+</head>
+<body>
+  <h1>Hola, Alumno 👨‍🎓</h1>
+  <p>Bienvenido al menú de cafeterías del ITESO.</p>
+
+  <script>
+    const nombre = localStorage.getItem('nombre');
+    const rol = localStorage.getItem('rol');
+
+    document.getElementById('saludo').innerText = `Hola, ${nombre} 👋 (${rol})`;
+  </script>
+</body>
+</html>
