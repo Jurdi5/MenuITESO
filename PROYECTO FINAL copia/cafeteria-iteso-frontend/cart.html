@@ -68,6 +68,26 @@
       </div>
     </div>
   </div>
+  <!--Modal de QR-->
+  <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title" id="qrModalLabel">Escanear QR o descargar</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="./frame.png" id="qrImage" class="img-fluid mb-3" alt="Codigo QR">
+        </div>
+        <div class="modal-footer">
+          <a href="./frame.png" download="codigo-qr-pago.png" class="btn btn-primary">
+            <i class="bi bi-download"></i> Descargar
+          </a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- CONTENIDO -->
   <div class="container my-4" id="general_container">
@@ -85,7 +105,7 @@
           <hr>
           <h5>Total: <span id="total_amount">$0.00 MXN</span></h5>
           <p id="tarjetaResumen" class="text-muted mt-2"></p>
-          <button class="btn btn-success w-100 mt-2">Pagar</button>
+          <button class="btn btn-success w-100 mt-2" data-bs-toggle="modal" data-bs-target="#qrModal">Pagar</button>
           <button class="btn btn-danger w-100 mt-2" id="vaciarCarrito">Vaciar carrito</button>
         </div>
       </div>
